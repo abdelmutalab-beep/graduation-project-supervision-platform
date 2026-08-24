@@ -1,0 +1,34 @@
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+secrets.*
+credentials.*
+config.local.*
+
+# Local development
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary / backup files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# Exported student or research data
+student-data/
+student-files/
+exports/
+uploads/
+private/
