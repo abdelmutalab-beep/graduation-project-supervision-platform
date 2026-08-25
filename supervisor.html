@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>لوحة المشرف | GPSP 2.0</title><link rel="stylesheet" href="assets/css/style.css"></head>
+<body>
+<header class="topbar"><div class="container nav"><div class="brand"><div class="logo">G</div><div>GPSP 2.0</div></div><nav class="navlinks"><a href="index.html">الرئيسية</a><a class="active" href="supervisor.html">المشرف</a><a href="student.html">الطالب</a></nav><div class="actions"><span id="api-status" class="pill info">جارٍ الاتصال</span></div></div></header>
+<div class="dashboard-shell">
+  <aside class="sidebar">
+    <div class="side-title">الإشراف</div>
+    <a class="side-link active" href="#overview">لوحة المتابعة</a>
+    <a class="side-link" href="#students">الطلاب</a>
+    <a class="side-link" href="#submissions">التسليمات</a>
+    <a class="side-link" href="#ai">المراجعة الذكية</a>
+    <a class="side-link" href="#timeline">المواعيد</a>
+  </aside>
+  <main class="main">
+    <div class="page-head"><div><h1>لوحة المشرف</h1><p>متابعة جميع المشاريع من مصدر بيانات واحد.</p></div><button class="btn primary" id="refresh-btn">تحديث البيانات</button></div>
+    <div class="grid cols-4" id="overview">
+      <div class="card metric"><div class="label">إجمالي الطلاب</div><div class="value" id="m-total">0</div><div class="delta">من Google Sheets</div></div>
+      <div class="card metric"><div class="label">تحت المراجعة</div><div class="value" id="m-review">0</div><div class="delta">تحتاج قرارًا</div></div>
+      <div class="card metric"><div class="label">تحتاج تعديل</div><div class="value" id="m-revision">0</div><div class="delta">متابعة مطلوبة</div></div>
+      <div class="card metric"><div class="label">متوسط الإنجاز</div><div class="value" id="m-progress">0%</div><div class="delta">جميع المشاريع</div></div>
+    </div>
+
+    <section class="card" id="students" style="margin-top:20px">
+      <div class="section-title"><div><h2 style="font-size:22px">الطلاب والمشاريع</h2><p>اختر طالبًا لفتح مساحة العمل.</p></div><span class="pill muted" id="student-count">0 طالب</span></div>
+      <div class="table-wrap"><table><thead><tr><th>الطالب</th><th>الرقم</th><th>العنوان</th><th>المرحلة</th><th>الإنجاز</th><th>الحالة</th><th></th></tr></thead><tbody id="students-body"><tr><td colspan="7" class="empty">جارٍ التحميل...</td></tr></tbody></table></div>
+    </section>
+
+    <section class="card" id="workspace" style="margin-top:20px;display:none">
+      <div class="page-head"><div><h1 id="ws-name" style="font-size:24px"></h1><p id="ws-title"></p></div><span class="pill info" id="ws-stage"></span></div>
+      <div class="grid cols-2">
+        <div><h3>سجل التسليمات</h3><div id="ws-submissions" class="timeline"></div></div>
+        <div><h3>الملاحظات الإشرافية</h3><div id="ws-reviews" class="timeline"></div></div>
+      </div>
+      <div class="notice" style="margin-top:18px">المراجعة بالذكاء الاصطناعي وقرارات الاعتماد ستُفعّل تلقائيًا عند ربط API الخلفي.</div>
+    </section>
+  </main>
+</div>
+<script src="assets/js/config.js"></script><script src="assets/js/api.js"></script><script src="assets/js/supervisor.js"></script>
+</body></html>

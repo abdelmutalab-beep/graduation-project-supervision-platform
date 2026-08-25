@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>بوابة الطالب | GPSP 2.0</title><link rel="stylesheet" href="assets/css/style.css"></head>
+<body>
+<header class="topbar"><div class="container nav"><div class="brand"><div class="logo">G</div><div>GPSP 2.0</div></div><nav class="navlinks"><a href="index.html">الرئيسية</a><a href="supervisor.html">المشرف</a><a class="active" href="student.html">الطالب</a></nav><div class="actions"><span id="student-api-status" class="pill info">جارٍ الاتصال</span></div></div></header>
+<main class="container section">
+  <div class="page-head"><div><h1>بوابة الطالب</h1><p>المشروع، التسليمات، التغذية الراجعة، والمواعيد في مكان واحد.</p></div></div>
+  <div id="student-login" class="card">
+    <h2>الوصول إلى المشروع</h2>
+    <p style="color:var(--muted)">عند تفعيل المصادقة سيُعرف الطالب تلقائيًا. في النسخة الحالية أدخل الرقم الجامعي للاختبار.</p>
+    <div class="form-grid"><div class="field"><label>الرقم الجامعي</label><input id="student-id" placeholder="Student ID"></div><div class="field" style="align-self:end"><button class="btn primary" id="student-load">فتح المشروع</button></div></div>
+  </div>
+  <div id="student-workspace" style="display:none">
+    <div class="grid cols-4">
+      <div class="card metric"><div class="label">الطالب</div><div class="value" id="s-name" style="font-size:20px">—</div></div>
+      <div class="card metric"><div class="label">المرحلة</div><div class="value" id="s-stage" style="font-size:22px">—</div></div>
+      <div class="card metric"><div class="label">نسبة الإنجاز</div><div class="value" id="s-progress">0%</div></div>
+      <div class="card metric"><div class="label">الحالة</div><div class="value" id="s-status" style="font-size:20px">—</div></div>
+    </div>
+    <section class="card" style="margin-top:20px">
+      <h2 id="s-title">—</h2><p id="s-case" style="color:var(--muted)"></p>
+      <div class="progress"><span id="s-progress-bar" style="width:0%"></span></div>
+    </section>
+    <div class="grid cols-2" style="margin-top:20px">
+      <section class="card"><h3>التسليمات</h3><div id="s-submissions" class="timeline"></div></section>
+      <section class="card"><h3>تغذية المشرف الراجعة</h3><div id="s-reviews" class="timeline"></div></section>
+    </div>
+  </div>
+</main>
+<script src="assets/js/config.js"></script><script src="assets/js/api.js"></script><script src="assets/js/student.js"></script>
+</body></html>
